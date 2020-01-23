@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('cors');
+    }
+
     public function signup(Request $request)
     {
         $request->validate([
