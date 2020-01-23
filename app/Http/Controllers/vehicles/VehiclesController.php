@@ -9,10 +9,7 @@ use App\Helpers\ApiHelpers;
 
 class VehiclesController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('cors');
-    }
+
 
     /**
      * Display a listing of the resource.
