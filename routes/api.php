@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group(['middleware' => 'cors'], function() {
+
     Route::group(['prefix' => 'auth'], function () {
         Route::post('login', 'AuthController@login');
         Route::post('signup', 'AuthController@signup');
@@ -26,4 +26,4 @@ Route::group(['middleware' => 'cors'], function() {
 
     Route::apiResource('vehicles', 'vehicles\VehiclesController');
     Route::get('user-vehicle/{id}', 'AuthController@getThroughUser');
-});
+
