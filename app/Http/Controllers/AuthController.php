@@ -18,7 +18,7 @@ class AuthController extends Controller
             'name'     => $request->name,
             'email'    => $request->email,
             'password' => bcrypt($request->password),
-            'type' => 2
+            'type' => ($request->name != null) ? $request->name : 1
         ]);
         $user->save();
         return response()->json([
